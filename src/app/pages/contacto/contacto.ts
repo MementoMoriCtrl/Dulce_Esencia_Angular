@@ -28,7 +28,7 @@ export class ContactoPage {
       return;
     }
 
-    this.confirmacion = '¡Gracias por escribirnos! Tu mensaje se ha procesado correctamente en esta demostración. No se envió a un servidor.';
+    this.confirmacion = '¡Gracias por escribirnos! Tu mensaje se ha procesado correctamente.';
     formulario.resetForm();
   }
 }
