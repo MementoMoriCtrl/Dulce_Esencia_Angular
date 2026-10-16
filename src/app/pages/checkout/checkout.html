@@ -16,7 +16,7 @@
       <p *ngIf="carrito.avisoStock()" class="mensaje-pedido mensaje-pedido-error" role="status">{{ carrito.avisoStock() }} Revisa el carrito para confirmar las cantidades.</p>
       <p *ngIf="error" class="mensaje-pedido mensaje-pedido-error" role="alert">{{ error }}</p>
       <button class="btn boton boton-principal" type="submit" [disabled]="enviando || cargandoCatalogo || !carrito.lineas().length || !!carrito.avisoStock()">{{ enviando ? 'Registrando pedido…' : cargandoCatalogo ? 'Verificando stock…' : 'Confirmar pedido' }}</button>
-      <small>Pedido de demostración registrado mediante JSON Server. No se procesan pagos.</small>
+      
     </form>
     <aside class="pedido-resumen resumen-checkout"><h3>Resumen de compra</h3><p *ngIf="!carrito.lineas().length">El carrito está vacío.</p><article *ngFor="let linea of carrito.lineas()" class="linea-resumen"><span>{{ linea.producto.nombre }} × {{ linea.cantidad }}<small>{{ linea.producto.precio | currency:'PEN':'symbol':'1.2-2':'es-PE' }} c/u</small></span><strong>{{ linea.subtotal | currency:'PEN':'symbol':'1.2-2':'es-PE' }}</strong></article><p>Entrega: {{ tipoEntrega === 'delivery' ? 'Delivery' : 'Recojo en tienda' }}</p><div class="carrito-total"><span>Total</span><strong>{{ carrito.total() | currency:'PEN':'symbol':'1.2-2':'es-PE' }}</strong></div></aside>
   </div>

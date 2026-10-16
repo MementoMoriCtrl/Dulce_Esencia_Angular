@@ -55,6 +55,12 @@
   color: var(--color-marron);
 }
 
+.datos-contacto-page .dato-icono svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
 .datos-contacto-page .dato-contacto span:not(.dato-icono) {
   margin-bottom: 6px;
   color: var(--color-marron);

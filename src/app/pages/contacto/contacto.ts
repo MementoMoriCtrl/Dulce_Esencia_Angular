@@ -10,6 +10,10 @@ import { FormsModule, NgForm } from '@angular/forms';
   styleUrl: './contacto.css',
 })
 export class ContactoPage {
+  // URLs provisionales: reemplázalas por los perfiles oficiales de Dulce Esencia.
+  instagramUrl = 'https://www.instagram.com/';
+  facebookUrl = 'https://www.facebook.com/';
+
   nombre = '';
   correo = '';
   asunto = '';
